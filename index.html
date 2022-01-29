@@ -1,0 +1,82 @@
+<!-- Raul Ramirez CST 325-->
+<html>
+
+<head>
+<title>Phong & Directional Light</title>
+
+<!-- All code is from scratch for learning purposes. --> 
+
+<!-- our own math -->
+<script src="math/vector3.js"></script>
+<script src="math/vector4.js"></script>
+<script src="math/matrix4.js"></script>
+
+<!-- our own utility code -->
+<script src="misc/input.js"></script>
+<script src="misc/time.js"></script>
+<script src="misc/utils-gl.js"></script>
+<script src="misc/utils-loading-promises.js"></script>
+
+<!-- our own geometry code -->
+<script src="misc/webgl-geometry-json.js"></script>
+<script src="misc/webgl-geometry-quad.js"></script>
+<script src="misc/webgl-geometry-particles.js"></script>
+
+<script src="misc/camera.orbit.js"></script>
+<script src="app.js"></script>
+
+<!-- Don't bother looking for app icon -->
+<link rel="shortcut icon" href="">
+<meta name="viewport" content="width=device-width",initial-scale="1.0">
+
+<style>
+    /* center the canvas on the screen 
+    #webgl-canvas {
+        border: solid;
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    */
+    .grid {
+        display: grid ;
+        grid-template-columns: 1f 768px 1f;
+        grid-template-rows: 1f 1f 1f 1f;
+        grid-template-areas: 
+        ". header ."
+        ". canvas ."
+        ". viewing ."
+       
+        
+        ;
+
+    }
+    #webgl-canvas{
+        grid-area: canvas;
+        justify-self: center;
+    }
+    .header {
+        grid-area: header;
+        justify-self: center;
+    }
+    #viewing{
+        grid-area: viewing;
+        justify-self: center;
+    }
+
+</style>
+</head> 
+
+<body>
+    <div class="grid">
+        <canvas id="webgl-canvas" width="768" height="512"></canvas>
+        <div class= "header"> Use up and down arrows to switch between: Sun, Earth and Neptune</div>
+        <div id="viewing">  </div>
+     </div>
+</body>
+
+</html>
