@@ -466,7 +466,7 @@ function updateAndRender() {
     //-----ORBITS-------
   
     var earthOrbit = 10;
-    var earthSpeed = 1;
+    var earthSpeed = .1;
     var orbit = new Matrix4().makeRotationY(earthSpeed *1.3);
     moonPosition = orbit.multiplyVector(moonPosition);
     var dis = .6;
