@@ -452,7 +452,7 @@ function updateAndRender() {
     var aspectRatio = gl.canvasWidth / gl.canvasHeight;
 
     //--rotations---
-    var earthSpeed = .5;
+    var earthSpeed = .05;
     var rot = new Matrix4().makeRotationY(earthSpeed/27);
     sunGeometry.worldMatrix.multiply(rot);
 
