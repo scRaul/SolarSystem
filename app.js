@@ -570,7 +570,7 @@ function updateAndRender() {
         camera.cameraTarget = new Vector4(0,1.5,0,0);
         camera.maxDistance = 10;
         camera.pitchDegrees = -4;
-        camera.yawDegrees -= earthSpeed;
+        camera.yawDegrees = 1.5;
         viewing.innerHTML ="Sun";
     }else if(view ==1 ){
 
