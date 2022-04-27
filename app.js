@@ -452,7 +452,7 @@ function updateAndRender() {
     var aspectRatio = gl.canvasWidth / gl.canvasHeight;
 
     //--rotations---
-    var earthSpeed = 1;
+    var earthSpeed = .5;
     var rot = new Matrix4().makeRotationY(earthSpeed/27);
     sunGeometry.worldMatrix.multiply(rot);
 
@@ -517,7 +517,7 @@ function updateAndRender() {
     Neptune.worldMatrix.elements[3] = neptunePosition.x * earthOrbit * 30;
     Neptune.worldMatrix.elements[11] = neptunePosition.z * earthOrbit * 30;
 
-    var cometSpeed = -.009
+    var cometSpeed = -.001
     Comet.worldMatrix.elements[3] += cometSpeed;
     Comet.worldMatrix.elements[7] += cometSpeed;
     particleSystemGeometry.worldMatrix.elements[3] += cometSpeed;
