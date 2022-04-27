@@ -452,7 +452,7 @@ function updateAndRender() {
     var aspectRatio = gl.canvasWidth / gl.canvasHeight;
 
     //--rotations---
-    var earthSpeed = .05;
+    var earthSpeed = 1;
     var rot = new Matrix4().makeRotationY(earthSpeed/27);
     sunGeometry.worldMatrix.multiply(rot);
 
@@ -570,7 +570,7 @@ function updateAndRender() {
         camera.cameraTarget = new Vector4(0,1.5,0,0);
         camera.maxDistance = 10;
         camera.pitchDegrees = -4;
-        camera.yawDegrees -= earthSpeed/27;
+        camera.yawDegrees -= earthSpeed;
         viewing.innerHTML ="Sun";
     }else if(view ==1 ){
 
